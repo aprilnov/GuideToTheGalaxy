@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UnitConversion : NSObject
+@interface GGRomanArabicConversion : NSObject
 
 /**
  *  Convert roman to arabic unit

@@ -16,7 +16,7 @@
 		E4909C7119F154FA00CC5987 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6819F154FA00CC5987 /* Info.plist */; };
 		E4909C7219F154FA00CC5987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C6919F154FA00CC5987 /* main.m */; };
 		E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7419F1551D00CC5987 /* GGTranslation.m */; };
-		E4909C7B19F1595200CC5987 /* UnitConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7A19F1595200CC5987 /* UnitConversion.m */; };
+		E4909C7B19F1595200CC5987 /* GGRomanArabicConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,8 @@
 		E4909C6919F154FA00CC5987 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4909C7319F1551D00CC5987 /* GGTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslation.h; sourceTree = "<group>"; };
 		E4909C7419F1551D00CC5987 /* GGTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslation.m; sourceTree = "<group>"; };
-		E4909C7919F1595200CC5987 /* UnitConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConversion.h; sourceTree = "<group>"; };
-		E4909C7A19F1595200CC5987 /* UnitConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConversion.m; sourceTree = "<group>"; };
+		E4909C7919F1595200CC5987 /* GGRomanArabicConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGRomanArabicConversion.h; sourceTree = "<group>"; };
+		E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRomanArabicConversion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,8 @@
 			children = (
 				E4909C7319F1551D00CC5987 /* GGTranslation.h */,
 				E4909C7419F1551D00CC5987 /* GGTranslation.m */,
-				E4909C7919F1595200CC5987 /* UnitConversion.h */,
-				E4909C7A19F1595200CC5987 /* UnitConversion.m */,
+				E4909C7919F1595200CC5987 /* GGRomanArabicConversion.h */,
+				E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */,
 			);
 			path = VOs;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */,
-				E4909C7B19F1595200CC5987 /* UnitConversion.m in Sources */,
+				E4909C7B19F1595200CC5987 /* GGRomanArabicConversion.m in Sources */,
 				E4909C7219F154FA00CC5987 /* main.m in Sources */,
 				E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */,
 				E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */,

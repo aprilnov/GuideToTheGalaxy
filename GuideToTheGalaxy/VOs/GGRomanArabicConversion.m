@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 April. All rights reserved.
 //
 
-#import "UnitConversion.h"
+#import "GGRomanArabicConversion.h"
 
 
 #define REPEATED_TIMES      3
@@ -18,7 +18,7 @@ static NSArray *NON_REPEAT_NUMBERS = nil;
 static NSDictionary *SUBTRACTABLE_MAP = nil;
 
 
-@implementation UnitConversion
+@implementation GGRomanArabicConversion
 
 + (NSDictionary *)romanArabic
 {
@@ -79,8 +79,8 @@ static NSDictionary *SUBTRACTABLE_MAP = nil;
         
         NSString *charN = [NSString stringWithFormat:@"%c", [romanNumber characterAtIndex:charIndex]];
         NSString *charPrev = (charIndex == 0?charN:[NSString stringWithFormat:@"%c", [romanNumber characterAtIndex:charIndex-1]]);
-        NSNumber *arabicN = [[UnitConversion romanArabic] objectForKey:charN];
-        NSNumber *arabicPrev = [[UnitConversion romanArabic] objectForKey:charPrev];
+        NSNumber *arabicN = [[GGRomanArabicConversion romanArabic] objectForKey:charN];
+        NSNumber *arabicPrev = [[GGRomanArabicConversion romanArabic] objectForKey:charPrev];
 
         if (arabicN){
             
