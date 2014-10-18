@@ -2,8 +2,8 @@
 //  main.m
 //  GuideToTheGalaxy
 //
-//  Created by pengyalan on 10/17/14.
-//  Copyright (c) 2014 April. All rights reserved.
+//  Created by April on 14-10-17.
+//  Copyright (c) 2014年 April. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

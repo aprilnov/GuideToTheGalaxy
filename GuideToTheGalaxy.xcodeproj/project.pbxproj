@@ -7,57 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6514DD619F10EFE003102CC /* GuideToTheGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DD519F10EFE003102CC /* GuideToTheGalaxyTests.m */; };
-		F6514DF119F110BA003102CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DE119F110BA003102CC /* AppDelegate.m */; };
-		F6514DF219F110BA003102CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DE419F110BA003102CC /* ViewController.m */; };
-		F6514DF319F110BA003102CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6514DE719F110BA003102CC /* LaunchScreen.xib */; };
-		F6514DF419F110BA003102CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6514DE919F110BA003102CC /* Main.storyboard */; };
-		F6514DF519F110BA003102CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6514DEB19F110BA003102CC /* Images.xcassets */; };
-		F6514DF619F110BA003102CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6514DED19F110BA003102CC /* Info.plist */; };
-		F6514DF719F110BA003102CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DEE19F110BA003102CC /* main.m */; };
-		F6514DFC19F112ED003102CC /* GGTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DFB19F112ED003102CC /* GGTranslate.m */; };
-		F6514DFF19F11306003102CC /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514DFE19F11306003102CC /* Globals.m */; };
+		E4909C5119F1547400CC5987 /* GuideToTheGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5019F1547400CC5987 /* GuideToTheGalaxyTests.m */; };
+		E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5C19F154FA00CC5987 /* AppDelegate.m */; };
+		E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5F19F154FA00CC5987 /* ViewController.m */; };
+		E4909C6E19F154FA00CC5987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6219F154FA00CC5987 /* LaunchScreen.xib */; };
+		E4909C6F19F154FA00CC5987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6419F154FA00CC5987 /* Main.storyboard */; };
+		E4909C7019F154FA00CC5987 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6619F154FA00CC5987 /* Images.xcassets */; };
+		E4909C7119F154FA00CC5987 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6819F154FA00CC5987 /* Info.plist */; };
+		E4909C7219F154FA00CC5987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C6919F154FA00CC5987 /* main.m */; };
+		E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7419F1551D00CC5987 /* GGTranslation.m */; };
+		E4909C7B19F1595200CC5987 /* UnitConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7A19F1595200CC5987 /* UnitConversion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F6514DD019F10EFE003102CC /* PBXContainerItemProxy */ = {
+		E4909C4B19F1547400CC5987 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6514DAE19F10EFE003102CC /* Project object */;
+			containerPortal = E4909C2919F1547400CC5987 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F6514DB519F10EFE003102CC;
+			remoteGlobalIDString = E4909C3019F1547400CC5987;
 			remoteInfo = GuideToTheGalaxy;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F6514DB619F10EFE003102CC /* GuideToTheGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideToTheGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6514DCF19F10EFE003102CC /* GuideToTheGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideToTheGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6514DD419F10EFE003102CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6514DD519F10EFE003102CC /* GuideToTheGalaxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideToTheGalaxyTests.m; sourceTree = "<group>"; };
-		F6514DE019F110BA003102CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F6514DE119F110BA003102CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F6514DE319F110BA003102CC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F6514DE419F110BA003102CC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F6514DE819F110BA003102CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F6514DEA19F110BA003102CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F6514DEB19F110BA003102CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F6514DED19F110BA003102CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6514DEE19F110BA003102CC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6514DFA19F112ED003102CC /* GGTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslate.h; sourceTree = "<group>"; };
-		F6514DFB19F112ED003102CC /* GGTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslate.m; sourceTree = "<group>"; };
-		F6514DFD19F11306003102CC /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
-		F6514DFE19F11306003102CC /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideToTheGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideToTheGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4909C4F19F1547400CC5987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4909C5019F1547400CC5987 /* GuideToTheGalaxyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideToTheGalaxyTests.m; sourceTree = "<group>"; };
+		E4909C5B19F154FA00CC5987 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E4909C5C19F154FA00CC5987 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E4909C5E19F154FA00CC5987 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E4909C5F19F154FA00CC5987 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4909C6319F154FA00CC5987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E4909C6519F154FA00CC5987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4909C6619F154FA00CC5987 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E4909C6819F154FA00CC5987 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4909C6919F154FA00CC5987 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4909C7319F1551D00CC5987 /* GGTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslation.h; sourceTree = "<group>"; };
+		E4909C7419F1551D00CC5987 /* GGTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslation.m; sourceTree = "<group>"; };
+		E4909C7919F1595200CC5987 /* UnitConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConversion.h; sourceTree = "<group>"; };
+		E4909C7A19F1595200CC5987 /* UnitConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConversion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F6514DB319F10EFE003102CC /* Frameworks */ = {
+		E4909C2E19F1547400CC5987 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6514DCC19F10EFE003102CC /* Frameworks */ = {
+		E4909C4719F1547400CC5987 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,105 +67,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6514DAD19F10EFE003102CC = {
+		E4909C2819F1547400CC5987 = {
 			isa = PBXGroup;
 			children = (
-				F6514DDF19F110BA003102CC /* GuideToTheGalaxy */,
-				F6514DD219F10EFE003102CC /* GuideToTheGalaxyTests */,
-				F6514DB719F10EFE003102CC /* Products */,
+				E4909C5A19F154FA00CC5987 /* GuideToTheGalaxy */,
+				E4909C4D19F1547400CC5987 /* GuideToTheGalaxyTests */,
+				E4909C3219F1547400CC5987 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F6514DB719F10EFE003102CC /* Products */ = {
+		E4909C3219F1547400CC5987 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DB619F10EFE003102CC /* GuideToTheGalaxy.app */,
-				F6514DCF19F10EFE003102CC /* GuideToTheGalaxyTests.xctest */,
+				E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */,
+				E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6514DD219F10EFE003102CC /* GuideToTheGalaxyTests */ = {
+		E4909C4D19F1547400CC5987 /* GuideToTheGalaxyTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DD519F10EFE003102CC /* GuideToTheGalaxyTests.m */,
-				F6514DD319F10EFE003102CC /* Supporting Files */,
+				E4909C5019F1547400CC5987 /* GuideToTheGalaxyTests.m */,
+				E4909C4E19F1547400CC5987 /* Supporting Files */,
 			);
 			path = GuideToTheGalaxyTests;
 			sourceTree = "<group>";
 		};
-		F6514DD319F10EFE003102CC /* Supporting Files */ = {
+		E4909C4E19F1547400CC5987 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DD419F10EFE003102CC /* Info.plist */,
+				E4909C4F19F1547400CC5987 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F6514DDF19F110BA003102CC /* GuideToTheGalaxy */ = {
+		E4909C5A19F154FA00CC5987 /* GuideToTheGalaxy */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DE019F110BA003102CC /* AppDelegate.h */,
-				F6514DE119F110BA003102CC /* AppDelegate.m */,
-				F6514DE219F110BA003102CC /* Controller */,
-				F6514DE519F110BA003102CC /* Model */,
-				F6514DE619F110BA003102CC /* Resources */,
-				F6514DEC19F110BA003102CC /* Supporting Files */,
-				F6514DEF19F110BA003102CC /* View */,
-				F6514DF019F110BA003102CC /* VOs */,
+				E4909C5B19F154FA00CC5987 /* AppDelegate.h */,
+				E4909C5C19F154FA00CC5987 /* AppDelegate.m */,
+				E4909C5D19F154FA00CC5987 /* Controllers */,
+				E4909C6019F154FA00CC5987 /* Models */,
+				E4909C6119F154FA00CC5987 /* Resources */,
+				E4909C6719F154FA00CC5987 /* Supporting Files */,
+				E4909C6A19F154FA00CC5987 /* Views */,
+				E4909C6B19F154FA00CC5987 /* VOs */,
 			);
 			path = GuideToTheGalaxy;
 			sourceTree = "<group>";
 		};
-		F6514DE219F110BA003102CC /* Controller */ = {
+		E4909C5D19F154FA00CC5987 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DE319F110BA003102CC /* ViewController.h */,
-				F6514DE419F110BA003102CC /* ViewController.m */,
+				E4909C5E19F154FA00CC5987 /* ViewController.h */,
+				E4909C5F19F154FA00CC5987 /* ViewController.m */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F6514DE519F110BA003102CC /* Model */ = {
+		E4909C6019F154FA00CC5987 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		F6514DE619F110BA003102CC /* Resources */ = {
+		E4909C6119F154FA00CC5987 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DE719F110BA003102CC /* LaunchScreen.xib */,
-				F6514DE919F110BA003102CC /* Main.storyboard */,
-				F6514DEB19F110BA003102CC /* Images.xcassets */,
+				E4909C6219F154FA00CC5987 /* LaunchScreen.xib */,
+				E4909C6419F154FA00CC5987 /* Main.storyboard */,
+				E4909C6619F154FA00CC5987 /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F6514DEC19F110BA003102CC /* Supporting Files */ = {
+		E4909C6719F154FA00CC5987 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DED19F110BA003102CC /* Info.plist */,
-				F6514DEE19F110BA003102CC /* main.m */,
+				E4909C6819F154FA00CC5987 /* Info.plist */,
+				E4909C6919F154FA00CC5987 /* main.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F6514DEF19F110BA003102CC /* View */ = {
+		E4909C6A19F154FA00CC5987 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		F6514DF019F110BA003102CC /* VOs */ = {
+		E4909C6B19F154FA00CC5987 /* VOs */ = {
 			isa = PBXGroup;
 			children = (
-				F6514DFA19F112ED003102CC /* GGTranslate.h */,
-				F6514DFB19F112ED003102CC /* GGTranslate.m */,
-				F6514DFD19F11306003102CC /* Globals.h */,
-				F6514DFE19F11306003102CC /* Globals.m */,
+				E4909C7319F1551D00CC5987 /* GGTranslation.h */,
+				E4909C7419F1551D00CC5987 /* GGTranslation.m */,
+				E4909C7919F1595200CC5987 /* UnitConversion.h */,
+				E4909C7A19F1595200CC5987 /* UnitConversion.m */,
 			);
 			path = VOs;
 			sourceTree = "<group>";
@@ -173,13 +173,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F6514DB519F10EFE003102CC /* GuideToTheGalaxy */ = {
+		E4909C3019F1547400CC5987 /* GuideToTheGalaxy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6514DD919F10EFE003102CC /* Build configuration list for PBXNativeTarget "GuideToTheGalaxy" */;
+			buildConfigurationList = E4909C5419F1547400CC5987 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxy" */;
 			buildPhases = (
-				F6514DB219F10EFE003102CC /* Sources */,
-				F6514DB319F10EFE003102CC /* Frameworks */,
-				F6514DB419F10EFE003102CC /* Resources */,
+				E4909C2D19F1547400CC5987 /* Sources */,
+				E4909C2E19F1547400CC5987 /* Frameworks */,
+				E4909C2F19F1547400CC5987 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,46 +187,46 @@
 			);
 			name = GuideToTheGalaxy;
 			productName = GuideToTheGalaxy;
-			productReference = F6514DB619F10EFE003102CC /* GuideToTheGalaxy.app */;
+			productReference = E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F6514DCE19F10EFE003102CC /* GuideToTheGalaxyTests */ = {
+		E4909C4919F1547400CC5987 /* GuideToTheGalaxyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6514DDC19F10EFE003102CC /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyTests" */;
+			buildConfigurationList = E4909C5719F1547400CC5987 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyTests" */;
 			buildPhases = (
-				F6514DCB19F10EFE003102CC /* Sources */,
-				F6514DCC19F10EFE003102CC /* Frameworks */,
-				F6514DCD19F10EFE003102CC /* Resources */,
+				E4909C4619F1547400CC5987 /* Sources */,
+				E4909C4719F1547400CC5987 /* Frameworks */,
+				E4909C4819F1547400CC5987 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F6514DD119F10EFE003102CC /* PBXTargetDependency */,
+				E4909C4C19F1547400CC5987 /* PBXTargetDependency */,
 			);
 			name = GuideToTheGalaxyTests;
 			productName = GuideToTheGalaxyTests;
-			productReference = F6514DCF19F10EFE003102CC /* GuideToTheGalaxyTests.xctest */;
+			productReference = E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F6514DAE19F10EFE003102CC /* Project object */ = {
+		E4909C2919F1547400CC5987 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = April;
 				TargetAttributes = {
-					F6514DB519F10EFE003102CC = {
+					E4909C3019F1547400CC5987 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
-					F6514DCE19F10EFE003102CC = {
+					E4909C4919F1547400CC5987 = {
 						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = F6514DB519F10EFE003102CC;
+						TestTargetID = E4909C3019F1547400CC5987;
 					};
 				};
 			};
-			buildConfigurationList = F6514DB119F10EFE003102CC /* Build configuration list for PBXProject "GuideToTheGalaxy" */;
+			buildConfigurationList = E4909C2C19F1547400CC5987 /* Build configuration list for PBXProject "GuideToTheGalaxy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,30 +234,30 @@
 				en,
 				Base,
 			);
-			mainGroup = F6514DAD19F10EFE003102CC;
-			productRefGroup = F6514DB719F10EFE003102CC /* Products */;
+			mainGroup = E4909C2819F1547400CC5987;
+			productRefGroup = E4909C3219F1547400CC5987 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6514DB519F10EFE003102CC /* GuideToTheGalaxy */,
-				F6514DCE19F10EFE003102CC /* GuideToTheGalaxyTests */,
+				E4909C3019F1547400CC5987 /* GuideToTheGalaxy */,
+				E4909C4919F1547400CC5987 /* GuideToTheGalaxyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F6514DB419F10EFE003102CC /* Resources */ = {
+		E4909C2F19F1547400CC5987 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6514DF619F110BA003102CC /* Info.plist in Resources */,
-				F6514DF519F110BA003102CC /* Images.xcassets in Resources */,
-				F6514DF319F110BA003102CC /* LaunchScreen.xib in Resources */,
-				F6514DF419F110BA003102CC /* Main.storyboard in Resources */,
+				E4909C7119F154FA00CC5987 /* Info.plist in Resources */,
+				E4909C7019F154FA00CC5987 /* Images.xcassets in Resources */,
+				E4909C6E19F154FA00CC5987 /* LaunchScreen.xib in Resources */,
+				E4909C6F19F154FA00CC5987 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6514DCD19F10EFE003102CC /* Resources */ = {
+		E4909C4819F1547400CC5987 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,49 +267,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F6514DB219F10EFE003102CC /* Sources */ = {
+		E4909C2D19F1547400CC5987 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6514DFC19F112ED003102CC /* GGTranslate.m in Sources */,
-				F6514DF219F110BA003102CC /* ViewController.m in Sources */,
-				F6514DF719F110BA003102CC /* main.m in Sources */,
-				F6514DFF19F11306003102CC /* Globals.m in Sources */,
-				F6514DF119F110BA003102CC /* AppDelegate.m in Sources */,
+				E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */,
+				E4909C7B19F1595200CC5987 /* UnitConversion.m in Sources */,
+				E4909C7219F154FA00CC5987 /* main.m in Sources */,
+				E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */,
+				E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6514DCB19F10EFE003102CC /* Sources */ = {
+		E4909C4619F1547400CC5987 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6514DD619F10EFE003102CC /* GuideToTheGalaxyTests.m in Sources */,
+				E4909C5119F1547400CC5987 /* GuideToTheGalaxyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F6514DD119F10EFE003102CC /* PBXTargetDependency */ = {
+		E4909C4C19F1547400CC5987 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6514DB519F10EFE003102CC /* GuideToTheGalaxy */;
-			targetProxy = F6514DD019F10EFE003102CC /* PBXContainerItemProxy */;
+			target = E4909C3019F1547400CC5987 /* GuideToTheGalaxy */;
+			targetProxy = E4909C4B19F1547400CC5987 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6514DE719F110BA003102CC /* LaunchScreen.xib */ = {
+		E4909C6219F154FA00CC5987 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F6514DE819F110BA003102CC /* Base */,
+				E4909C6319F154FA00CC5987 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		F6514DE919F110BA003102CC /* Main.storyboard */ = {
+		E4909C6419F154FA00CC5987 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F6514DEA19F110BA003102CC /* Base */,
+				E4909C6519F154FA00CC5987 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F6514DD719F10EFE003102CC /* Debug */ = {
+		E4909C5219F1547400CC5987 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,7 +358,7 @@
 			};
 			name = Debug;
 		};
-		F6514DD819F10EFE003102CC /* Release */ = {
+		E4909C5319F1547400CC5987 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -393,27 +393,27 @@
 			};
 			name = Release;
 		};
-		F6514DDA19F10EFE003102CC /* Debug */ = {
+		E4909C5519F1547400CC5987 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GuideToTheGalaxy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GuideToTheGalaxy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		F6514DDB19F10EFE003102CC /* Release */ = {
+		E4909C5619F1547400CC5987 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GuideToTheGalaxy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GuideToTheGalaxy/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		F6514DDD19F10EFE003102CC /* Debug */ = {
+		E4909C5819F1547400CC5987 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -432,7 +432,7 @@
 			};
 			name = Debug;
 		};
-		F6514DDE19F10EFE003102CC /* Release */ = {
+		E4909C5919F1547400CC5987 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,32 +450,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6514DB119F10EFE003102CC /* Build configuration list for PBXProject "GuideToTheGalaxy" */ = {
+		E4909C2C19F1547400CC5987 /* Build configuration list for PBXProject "GuideToTheGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6514DD719F10EFE003102CC /* Debug */,
-				F6514DD819F10EFE003102CC /* Release */,
+				E4909C5219F1547400CC5987 /* Debug */,
+				E4909C5319F1547400CC5987 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6514DD919F10EFE003102CC /* Build configuration list for PBXNativeTarget "GuideToTheGalaxy" */ = {
+		E4909C5419F1547400CC5987 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6514DDA19F10EFE003102CC /* Debug */,
-				F6514DDB19F10EFE003102CC /* Release */,
+				E4909C5519F1547400CC5987 /* Debug */,
+				E4909C5619F1547400CC5987 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F6514DDC19F10EFE003102CC /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyTests" */ = {
+		E4909C5719F1547400CC5987 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6514DDD19F10EFE003102CC /* Debug */,
-				F6514DDE19F10EFE003102CC /* Release */,
+				E4909C5819F1547400CC5987 /* Debug */,
+				E4909C5919F1547400CC5987 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F6514DAE19F10EFE003102CC /* Project object */;
+	rootObject = E4909C2919F1547400CC5987 /* Project object */;
 }
