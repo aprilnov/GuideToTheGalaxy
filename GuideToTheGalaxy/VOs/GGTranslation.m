@@ -10,7 +10,10 @@
 
 #define SIGN_QUESTION       @"?"
 #define SIGN_EQUAL          @"is"
-#define SIGN_CONVERSION     @"how much"
+#define SIGN_Q_CONVERSION   @"how much"
+#define SIGN_Q_CALCULATE    @"how many"
+
+#define ERROR_MSG           @"I have no idea what you are talking about"
 
 @implementation GGTranslation
 

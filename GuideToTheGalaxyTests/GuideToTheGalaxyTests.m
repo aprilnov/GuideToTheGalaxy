@@ -40,10 +40,17 @@
     XCTAssert([[UnitConversion convertRomanToArabic:@"XXXIX"] isEqualToNumber:[NSNumber numberWithInt:39]],
               @"check roman MMM to arabic 39");
     
-//    XCTAssert([[UnitConversion convertRomanToArabic:@"MCMXLIV"] isEqualToNumber:[NSNumber numberWithInt:1944]],
-//              @"check roman MCMXLIV to arabic 1944");
-//    XCTAssert([[UnitConversion convertArabicToRoman:[NSNumber numberWithInt:1903]] isEqualToString:@"MCMIII"],
-//              @"check arabic 1903 to roman MCMIII");
+    XCTAssert([[UnitConversion convertRomanToArabic:@"MCMXLIV"] isEqualToNumber:[NSNumber numberWithInt:1944]],
+              @"check roman MCMXLIV to arabic 1944");
+    
+    XCTAssert([[UnitConversion convertArabicToRoman:[NSNumber numberWithInt:1903]] isEqualToString:@"MCMIII"],
+              @"check arabic 1903 to roman MCMIII");
+    
+    XCTAssert([[UnitConversion convertArabicToRoman:[NSNumber numberWithInt:1944]] isEqualToString:@"MCMXLIV"],
+              @"check arabic 1944 to roman MCMXLIV");
+    
+    XCTAssert([[UnitConversion convertArabicToRoman:[NSNumber numberWithInt:1954]] isEqualToString:@"MCMLIV"],
+              @"check arabic 1954 to roman MCMLIV");
 }
 
 - (void)testUnitDefine {
@@ -67,8 +74,20 @@
 }
 
 - (void)testInValidInput {
+    
+    // Only allowed number to repeat
+    XCTAssertThrowsSpecific([UnitConversion convertRomanToArabic:@"DD"], NSException, @"this roman number cannot repeat");
+    
+    // repeat only 3 times
+    XCTAssertThrowsSpecific([UnitConversion convertRomanToArabic:@"MMMM"], NSException, @"this roman number cannot repeat more than 3 times");
+    
+    // subtract number restrict
+    XCTAssertThrowsSpecific([UnitConversion convertRomanToArabic:@"IM"], NSException, @"This subtract is not allowed");
+    
+    // subtract only once
+    XCTAssertThrowsSpecific([UnitConversion convertRomanToArabic:@"IVX"], NSException, @"Only one small-value symbol may be subtracted from any large-value symbol");
+    
     // how much wood could a woodchuck chuck if a woodchuck could chuck wood ?
-    XCTAssert(YES, @"Pass");
 }
 
 
