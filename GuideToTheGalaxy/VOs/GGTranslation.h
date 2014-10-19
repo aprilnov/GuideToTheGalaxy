@@ -10,4 +10,7 @@
 
 @interface GGTranslation : NSObject
 
++ (id)sharedInstance;
+- (NSString *)translateInput:(NSString *)input;
+
 @end

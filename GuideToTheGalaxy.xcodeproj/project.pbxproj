@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42F51B119F3A688008AEE27 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E42F51B019F3A688008AEE27 /* input.txt */; };
 		E4909C5119F1547400CC5987 /* GuideToTheGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5019F1547400CC5987 /* GuideToTheGalaxyTests.m */; };
 		E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5C19F154FA00CC5987 /* AppDelegate.m */; };
 		E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5F19F154FA00CC5987 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42F51B019F3A688008AEE27 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideToTheGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideToTheGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4909C4F19F1547400CC5987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		E4909C6119F154FA00CC5987 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E42F51B019F3A688008AEE27 /* input.txt */,
 				E4909C6219F154FA00CC5987 /* LaunchScreen.xib */,
 				E4909C6419F154FA00CC5987 /* Main.storyboard */,
 				E4909C6619F154FA00CC5987 /* Images.xcassets */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4909C7119F154FA00CC5987 /* Info.plist in Resources */,
+				E42F51B119F3A688008AEE27 /* input.txt in Resources */,
 				E4909C7019F154FA00CC5987 /* Images.xcassets in Resources */,
 				E4909C6E19F154FA00CC5987 /* LaunchScreen.xib in Resources */,
 				E4909C6F19F154FA00CC5987 /* Main.storyboard in Resources */,
