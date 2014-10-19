@@ -18,15 +18,22 @@
 #define REGEX_HOWMANY       @"^how many ([a-zA-Z]\\w+) is ((?:\\w+ )+)([A-Z]\\w+) \\?$"
 
 @interface GGTranslation () {
-    NSMutableDictionary *romanMapping;
-    NSMutableDictionary *currencyValueMapping;
+    NSMutableDictionary *romanMap;      // put roman alias
+    NSMutableDictionary *currencyValueMap;      // currency calculated value
 }
 
+// check input type
 - (BOOL)checkInputType:(NSString *)line withRegex:(NSString *)regex;
 
 - (void)dealAssignment:(NSString *)line;
+
+// calculate currency value
 - (void)dealCredits:(NSString *)line;
+
+// convert roman to arabic with alias
 - (NSString *)answerRomanQuestion:(NSString *)line;
+
+// calculate currency value with roman param
 - (NSString *)answerCurrencyQuestion:(NSString *)line;
 
 @end
@@ -36,13 +43,13 @@
 
 -(id)init {
     if ( self = [super init] ) {
-        romanMapping = [[NSMutableDictionary alloc] init];
-        currencyValueMapping = [[NSMutableDictionary alloc] init];
+        romanMap = [[NSMutableDictionary alloc] init];
+        currencyValueMap = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
-
+// singlton
 + (id)sharedInstance {
     static GGTranslation *sharedGGTranslation = nil;
     @synchronized(self) {
@@ -59,13 +66,17 @@
     if ([self checkInputType:input withRegex:REGEX_ASSIGN]) {
         [self dealAssignment:input];
         return @"";
+        
     } else if ([self checkInputType:input withRegex:REGEX_CREDITS]) {
         [self dealCredits:input];
         return @"";
+        
     } else if ([self checkInputType:input withRegex:REGEX_HOWMUCH]) {
         return [self answerRomanQuestion:input];
+        
     } else if ([self checkInputType:input withRegex:REGEX_HOWMANY]) {
         return [self answerCurrencyQuestion:input];
+        
     }
     
     return ERROR_MSG;
@@ -88,11 +99,11 @@
 
 - (void)dealAssignment:(NSString *)line {
     
-    // find assignment
+    // find alias
     if ([self checkInputType:line withRegex:REGEX_ASSIGN] > 0) {
         
         NSArray *group = [line componentsSeparatedByString:@" is "];
-        [romanMapping setObject:group[1] forKey:group[0]];  // save assignment
+        [romanMap setObject:group[1] forKey:group[0]];  // save alias
     }
 }
 
@@ -101,8 +112,8 @@
     // glob prok Gold is 57800 Credits
     if ([self checkInputType:line withRegex:REGEX_CREDITS] > 0) {
         
+        // without "is"
         NSArray *group = [[[line componentsSeparatedByString:@" is"] componentsJoinedByString:@""] componentsSeparatedByString:@" "];
-        
         
         NSMutableString *romanStr = [NSMutableString string];
         NSNumber *arabicNum = nil;
@@ -110,21 +121,22 @@
         
         for (int i = 0; i < group.count; i++) {
             
-            // replace roman alias
-            if ([romanMapping.allKeys containsObject:group[i]]) {
-                [romanStr appendString:[romanMapping objectForKey:group[i]]];
-            } else if ([group[i] intValue] != 0) {
+            if ([romanMap.allKeys containsObject:group[i]]) {   // colllect roman numbers
+                [romanStr appendString:[romanMap objectForKey:group[i]]];
+            } else if ([group[i] intValue] != 0) {      // arabic number
                 arabicNum = [NSNumber numberWithInt:[group[i] intValue]];
-            } else {
+            } else {    // get currency
                 if (![group[i] isEqualToString:@"Credits"]) {
                     [currencyArr addObject:group[i]];
                 }
             }
         }
         
+        // convert roman to arabic
         NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
         
-        [currencyValueMapping setObject:[NSNumber numberWithDouble:[arabicNum floatValue]/[romanNumber floatValue]] forKey:currencyArr[0]];
+        // calculate currency value
+        [currencyValueMap setObject:[NSNumber numberWithDouble:[arabicNum floatValue]/[romanNumber floatValue]] forKey:currencyArr[0]];
         
     }
 }
@@ -143,16 +155,16 @@
         
         for (int i = 0; i < group.count; i++) {
             
-            // replace roman alias
-            if ([romanMapping.allKeys containsObject:group[i]]) {
-                [romanStr appendString:[romanMapping objectForKey:group[i]]];
+            // collect roman numbers
+            if ([romanMap.allKeys containsObject:group[i]]) {
+                [romanStr appendString:[romanMap objectForKey:group[i]]];
             }
         }
         
+        // convert roman to arabic
         NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
         
         return [question stringByAppendingFormat:@" is %d", [romanNumber intValue]];
-
     }
     
     return @"";
@@ -168,25 +180,22 @@
         
         NSArray *group = [question componentsSeparatedByString:@" "];
         
-        
         NSMutableString *romanStr = [NSMutableString string];
         NSNumber *currencyValue = nil;
         
-        
         for (int i = 0; i < group.count; i++) {
             
-            // replace roman alias
-            if ([romanMapping.allKeys containsObject:group[i]]) {
-                [romanStr appendString:[romanMapping objectForKey:group[i]]];
-            } else {
-                currencyValue = [currencyValueMapping valueForKey:group[i]];
+            if ([romanMap.allKeys containsObject:group[i]]) {       // collect roman alias
+                [romanStr appendString:[romanMap objectForKey:group[i]]];
+            } else {    // get currency value
+                currencyValue = [currencyValueMap valueForKey:group[i]];
             }
         }
         
+        // convert roman to arabic
         NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
         
         NSString *returnStr = [question stringByAppendingFormat:@" is %.f Credits", [[NSNumber numberWithDouble:[romanNumber intValue]*[currencyValue floatValue]] floatValue]];
-        NSLog(@"returnstr ===> %@", returnStr);
         
         return returnStr;
         

@@ -14,6 +14,8 @@
     __weak IBOutlet UITextView *outputTextView;
 }
 
+- (void)updateOutputTextView:(NSString *)output;
+
 @end
 
 @implementation ViewController
@@ -31,7 +33,9 @@
                                                           usedEncoding:&encoding
                                                                  error:&error];
     
+    // update input text view
     inputTextView.text = fileContents;
+    
     
     NSMutableString *outputStr = [NSMutableString string];
     
@@ -40,18 +44,21 @@
 
         [outputStr appendFormat:@"%@\n", [[GGTranslation sharedInstance] translateInput:line]];
         
+        // update output textview in mainthread
         [self performSelector:@selector(updateOutputTextView:) withObject:outputStr afterDelay:0];
         
     }];
 }
 
-- (void)updateOutputTextView:(NSString *)output {
-    outputTextView.text = output;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - private methods
+
+- (void)updateOutputTextView:(NSString *)output {
+    outputTextView.text = output;
 }
 
 @end

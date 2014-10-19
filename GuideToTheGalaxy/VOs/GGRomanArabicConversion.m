@@ -11,58 +11,36 @@
 
 #define REPEATED_TIMES      3
 
+#define ROMAN_ARABIC_MAP  @{@"I":[NSNumber numberWithInt:1],\
+                            @"V":[NSNumber numberWithInt:5],\
+                            @"X":[NSNumber numberWithInt:10],\
+                            @"L":[NSNumber numberWithInt:50],\
+                            @"C":[NSNumber numberWithInt:100],\
+                            @"D":[NSNumber numberWithInt:500],\
+                            @"M":[NSNumber numberWithInt:1000]}
 
-static NSDictionary *ROMAN_ARABIC_MAP = nil;
-static NSDictionary *ARABIC_ROMAN_MAP = nil;
-static NSArray *NON_REPEAT_NUMBERS = nil;
-static NSDictionary *SUBTRACTABLE_MAP = nil;
+#define ARABIC_ROMAN_MAP  @{[NSNumber numberWithInt:1]:@"I",\
+                            [NSNumber numberWithInt:4]:@"IV",\
+                            [NSNumber numberWithInt:5]:@"V",\
+                            [NSNumber numberWithInt:9]:@"IX",\
+                            [NSNumber numberWithInt:10]:@"X",\
+                            [NSNumber numberWithInt:40]:@"XL",\
+                            [NSNumber numberWithInt:50]:@"L",\
+                            [NSNumber numberWithInt:90]:@"XC",\
+                            [NSNumber numberWithInt:100]:@"C",\
+                            [NSNumber numberWithInt:400]:@"CD",\
+                            [NSNumber numberWithInt:500]:@"D",\
+                            [NSNumber numberWithInt:900]:@"CM",\
+                            [NSNumber numberWithInt:1000]:@"M"}
+
+#define NON_REPEAT_NUMBERS @[@"D", @"L", @"V"]
+
+#define SUBTRACTABLE_MAP @{@"I":@[@"V", @"X"],\
+                           @"X":@[@"L", @"C"],\
+                           @"C":@[@"D", @"M"]}
 
 
 @implementation GGRomanArabicConversion
-
-+ (NSDictionary *)romanArabic
-{
-    if (!ROMAN_ARABIC_MAP){
-        ROMAN_ARABIC_MAP = [NSDictionary dictionaryWithObjectsAndKeys:
-                        [NSNumber numberWithInt:1], @"I",
-                        [NSNumber numberWithInt:5], @"V",
-                        [NSNumber numberWithInt:10], @"X",
-                        [NSNumber numberWithInt:50], @"L",
-                        [NSNumber numberWithInt:100], @"C",
-                        [NSNumber numberWithInt:500], @"D",
-                        [NSNumber numberWithInt:1000], @"M", nil];
-    }
-    
-    if (!ARABIC_ROMAN_MAP){
-        ARABIC_ROMAN_MAP = [NSDictionary dictionaryWithObjectsAndKeys:
-                        @"M", [NSNumber numberWithInt:1000],
-                        @"CM", [NSNumber numberWithInt:900],
-                        @"D", [NSNumber numberWithInt:500],
-                        @"CD", [NSNumber numberWithInt:400],
-                        @"C", [NSNumber numberWithInt:100],
-                        @"XC", [NSNumber numberWithInt:90],
-                        @"L", [NSNumber numberWithInt:50],
-                        @"XL", [NSNumber numberWithInt:40],
-                        @"X", [NSNumber numberWithInt:10],
-                        @"IX", [NSNumber numberWithInt:9],
-                        @"V", [NSNumber numberWithInt:5],
-                        @"IV", [NSNumber numberWithInt:4],
-                        @"I", [NSNumber numberWithInt:1], nil];
-    }
-    
-    if (!NON_REPEAT_NUMBERS){
-        NON_REPEAT_NUMBERS = [NSArray arrayWithObjects:@"D", @"L", @"V", nil];
-    }
-    
-    if (!SUBTRACTABLE_MAP){
-        SUBTRACTABLE_MAP = [NSDictionary dictionaryWithObjectsAndKeys:
-                            [NSArray arrayWithObjects:@"V", @"X", nil], @"I",
-                            [NSArray arrayWithObjects:@"L", @"C", nil], @"X",
-                            [NSArray arrayWithObjects:@"D", @"M", nil], @"C", nil];
-    }
-    
-    return ROMAN_ARABIC_MAP;
-}
 
 
 + (NSNumber *)convertRomanToArabic:(NSString *)romanNumber {
@@ -79,8 +57,8 @@ static NSDictionary *SUBTRACTABLE_MAP = nil;
         
         NSString *charN = [NSString stringWithFormat:@"%c", [romanNumber characterAtIndex:charIndex]];
         NSString *charPrev = (charIndex == 0?charN:[NSString stringWithFormat:@"%c", [romanNumber characterAtIndex:charIndex-1]]);
-        NSNumber *arabicN = [[GGRomanArabicConversion romanArabic] objectForKey:charN];
-        NSNumber *arabicPrev = [[GGRomanArabicConversion romanArabic] objectForKey:charPrev];
+        NSNumber *arabicN = [ROMAN_ARABIC_MAP objectForKey:charN];
+        NSNumber *arabicPrev = [ROMAN_ARABIC_MAP objectForKey:charPrev];
 
         if (arabicN){
             
