@@ -11,7 +11,7 @@
 @interface GGTranslation : NSObject
 
 /**
- *  singlton
+ *  singleton
  *
  *  @return instance
  */

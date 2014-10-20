@@ -49,7 +49,7 @@
     return self;
 }
 
-// singlton
+// singleton
 + (id)sharedInstance {
     static GGTranslation *sharedGGTranslation = nil;
     @synchronized(self) {
