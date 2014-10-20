@@ -10,7 +10,20 @@
 
 @interface GGTranslation : NSObject
 
+/**
+ *  singlton
+ *
+ *  @return instance
+ */
 + (id)sharedInstance;
+
+/**
+ *  translate input line by line
+ *
+ *  @param input
+ *
+ *  @return translated output
+ */
 - (NSString *)translateInput:(NSString *)input;
 
 @end

@@ -14,10 +14,9 @@
 		E4909C6E19F154FA00CC5987 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6219F154FA00CC5987 /* LaunchScreen.xib */; };
 		E4909C6F19F154FA00CC5987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6419F154FA00CC5987 /* Main.storyboard */; };
 		E4909C7019F154FA00CC5987 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6619F154FA00CC5987 /* Images.xcassets */; };
-		E4909C7119F154FA00CC5987 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4909C6819F154FA00CC5987 /* Info.plist */; };
 		E4909C7219F154FA00CC5987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C6919F154FA00CC5987 /* main.m */; };
-		E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7419F1551D00CC5987 /* GGTranslation.m */; };
-		E4909C7B19F1595200CC5987 /* GGRomanArabicConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */; };
+		F6514E0519F4A78F003102CC /* GGRomanArabicConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */; };
+		F6514E0619F4A78F003102CC /* GGTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514E0419F4A78F003102CC /* GGTranslation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +44,10 @@
 		E4909C6619F154FA00CC5987 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4909C6819F154FA00CC5987 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4909C6919F154FA00CC5987 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E4909C7319F1551D00CC5987 /* GGTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslation.h; sourceTree = "<group>"; };
-		E4909C7419F1551D00CC5987 /* GGTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslation.m; sourceTree = "<group>"; };
-		E4909C7919F1595200CC5987 /* GGRomanArabicConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGRomanArabicConversion.h; sourceTree = "<group>"; };
-		E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRomanArabicConversion.m; sourceTree = "<group>"; };
+		F6514E0119F4A78F003102CC /* GGRomanArabicConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGRomanArabicConversion.h; sourceTree = "<group>"; };
+		F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRomanArabicConversion.m; sourceTree = "<group>"; };
+		F6514E0319F4A78F003102CC /* GGTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslation.h; sourceTree = "<group>"; };
+		F6514E0419F4A78F003102CC /* GGTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +109,7 @@
 				E4909C5B19F154FA00CC5987 /* AppDelegate.h */,
 				E4909C5C19F154FA00CC5987 /* AppDelegate.m */,
 				E4909C5D19F154FA00CC5987 /* Controllers */,
-				E4909C6019F154FA00CC5987 /* Models */,
+				F6514E0019F4A78F003102CC /* Models */,
 				E4909C6119F154FA00CC5987 /* Resources */,
 				E4909C6719F154FA00CC5987 /* Supporting Files */,
 				E4909C6A19F154FA00CC5987 /* Views */,
@@ -126,13 +125,6 @@
 				E4909C5F19F154FA00CC5987 /* ViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E4909C6019F154FA00CC5987 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E4909C6119F154FA00CC5987 /* Resources */ = {
@@ -165,12 +157,19 @@
 		E4909C6B19F154FA00CC5987 /* VOs */ = {
 			isa = PBXGroup;
 			children = (
-				E4909C7319F1551D00CC5987 /* GGTranslation.h */,
-				E4909C7419F1551D00CC5987 /* GGTranslation.m */,
-				E4909C7919F1595200CC5987 /* GGRomanArabicConversion.h */,
-				E4909C7A19F1595200CC5987 /* GGRomanArabicConversion.m */,
 			);
 			path = VOs;
+			sourceTree = "<group>";
+		};
+		F6514E0019F4A78F003102CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6514E0119F4A78F003102CC /* GGRomanArabicConversion.h */,
+				F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */,
+				F6514E0319F4A78F003102CC /* GGTranslation.h */,
+				F6514E0419F4A78F003102CC /* GGTranslation.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4909C7119F154FA00CC5987 /* Info.plist in Resources */,
 				E42F51B119F3A688008AEE27 /* input.txt in Resources */,
 				E4909C7019F154FA00CC5987 /* Images.xcassets in Resources */,
 				E4909C6E19F154FA00CC5987 /* LaunchScreen.xib in Resources */,
@@ -275,11 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6514E0619F4A78F003102CC /* GGTranslation.m in Sources */,
 				E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */,
-				E4909C7B19F1595200CC5987 /* GGRomanArabicConversion.m in Sources */,
 				E4909C7219F154FA00CC5987 /* main.m in Sources */,
+				F6514E0519F4A78F003102CC /* GGRomanArabicConversion.m in Sources */,
 				E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */,
-				E4909C7519F1551D00CC5987 /* GGTranslation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

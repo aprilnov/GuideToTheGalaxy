@@ -61,8 +61,6 @@
 
 - (NSString *)translateInput:(NSString *)input {
     
-//    NSLog(@"input --> %@", input);
-    
     if ([self checkInputType:input withRegex:REGEX_ASSIGN]) {
         [self dealAssignment:input];
         return @"";
@@ -133,7 +131,7 @@
         }
         
         // convert roman to arabic
-        NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
+        NSNumber *romanNumber = [[[GGRomanArabicConversion alloc] init] convertRomanToArabic:romanStr];
         
         // calculate currency value
         [currencyValueMap setObject:[NSNumber numberWithDouble:[arabicNum floatValue]/[romanNumber floatValue]] forKey:currencyArr[0]];
@@ -162,7 +160,7 @@
         }
         
         // convert roman to arabic
-        NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
+        NSNumber *romanNumber = [[[GGRomanArabicConversion alloc] init] convertRomanToArabic:romanStr];
         
         return [question stringByAppendingFormat:@" is %d", [romanNumber intValue]];
     }
@@ -193,7 +191,7 @@
         }
         
         // convert roman to arabic
-        NSNumber *romanNumber = [GGRomanArabicConversion convertRomanToArabic:romanStr];
+        NSNumber *romanNumber = [[[GGRomanArabicConversion alloc] init] convertRomanToArabic:romanStr];
         
         NSString *returnStr = [question stringByAppendingFormat:@" is %.f Credits", [[NSNumber numberWithDouble:[romanNumber intValue]*[currencyValue floatValue]] floatValue]];
         

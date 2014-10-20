@@ -14,6 +14,7 @@
     __weak IBOutlet UITextView *outputTextView;
 }
 
+- (NSString *)getInputContent;
 - (void)updateOutputTextView:(NSString *)output;
 
 @end
@@ -23,15 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // read local txt file as input
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *filePath = [mainBundle pathForResource:@"input" ofType:@"txt"];
-    
-    NSStringEncoding encoding;
-    NSError *error;
-    NSString *fileContents = [[NSString alloc] initWithContentsOfFile:filePath
-                                                          usedEncoding:&encoding
-                                                                 error:&error];
+    NSString *fileContents = [self getInputContent];
     
     // update input text view
     inputTextView.text = fileContents;
@@ -56,6 +49,20 @@
 }
 
 #pragma mark - private methods
+
+- (NSString *)getInputContent {
+    // read local txt file as input
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *filePath = [mainBundle pathForResource:@"input" ofType:@"txt"];
+    
+    NSStringEncoding encoding;
+    NSError *error;
+    NSString *fileContents = [[NSString alloc] initWithContentsOfFile:filePath
+                                                         usedEncoding:&encoding
+                                                                error:&error];
+    
+    return fileContents;
+}
 
 - (void)updateOutputTextView:(NSString *)output {
     outputTextView.text = output;

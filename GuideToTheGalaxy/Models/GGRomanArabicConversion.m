@@ -40,18 +40,26 @@
                            @"C":@[@"D", @"M"]}
 
 
+@interface GGRomanArabicConversion ()
+
+// check repeat rule
+- (BOOL)checkRepeatForString:(NSString *)charN inTable:(NSDictionary *)repeatTable;
+
+@end
+
+
 @implementation GGRomanArabicConversion
 
 
-+ (NSNumber *)convertRomanToArabic:(NSString *)romanNumber {
+- (NSNumber *)convertRomanToArabic:(NSString *)romanNumber {
     
     // empty input
     if ([romanNumber isEqualToString:@""] || romanNumber == nil) {
-        [NSException raise:@"invalid input" format:@"%@", romanNumber];
+        [NSException raise:@"Invalid input" format:@"%@", romanNumber];
     }
     
     NSMutableArray *resultArr = [NSMutableArray array];
-    NSMutableDictionary *repeatTable = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *repeatTable = [NSMutableDictionary dictionary];
     
     for (NSInteger charIndex = 0; charIndex < romanNumber.length; charIndex++){
         
@@ -59,38 +67,34 @@
         NSString *charPrev = (charIndex == 0?charN:[NSString stringWithFormat:@"%c", [romanNumber characterAtIndex:charIndex-1]]);
         NSNumber *arabicN = [ROMAN_ARABIC_MAP objectForKey:charN];
         NSNumber *arabicPrev = [ROMAN_ARABIC_MAP objectForKey:charPrev];
-
+        
+        // can convert to a arabic
         if (arabicN){
             
+            // first char
             if (charIndex == 0){
                 [resultArr addObject:arabicN];
+                
             } else {
+                
                 if ([charPrev isEqualToString:charN]) {     // repeat
-                    if ([NON_REPEAT_NUMBERS containsObject:charN]) {    // cannot repeatable numbers
-                        [NSException raise:@"this roman number cannot repeat" format:@"%@", romanNumber];
-                    } else {    // repeat more than 3 times
-                        if ([repeatTable valueForKey:charN] != nil && [[repeatTable valueForKey:charN] intValue] == REPEATED_TIMES) {
-                            [NSException raise:@"this roman number cannot repeat more than 3 times" format:@"%@", romanNumber];
-                        } else {
-                            if ([repeatTable valueForKey:charN] == nil) {
-                                [repeatTable setValue:[NSNumber numberWithInt:2] forKey:charN];
-                            } else {
-                                NSNumber *repeatTimes = [NSNumber numberWithInt:[[repeatTable valueForKey:charN] intValue]+1];
-                                [repeatTable setValue:repeatTimes forKey:charN];
-                            }
-                            
-                            [resultArr addObject:arabicN];
-                        }
+                    
+                    if ([self checkRepeatForString:charN inTable:repeatTable]) {
+                        [resultArr addObject:arabicN];
                     }
+                    
                     
                 } else {
                     
                     NSNumber *lastCalculatedN = [resultArr lastObject];
                     if (lastCalculatedN < arabicN){
+                        
                         if ([lastCalculatedN intValue] != [arabicPrev intValue]) {  // already been subtracted
                             [NSException raise:@"Only one small-value symbol may be subtracted from any large-value symbol" format:@"%@", romanNumber];
+                            
                         } else if ( ![[SUBTRACTABLE_MAP allKeys] containsObject:charPrev] || ![(NSArray *)[SUBTRACTABLE_MAP valueForKey:charPrev] containsObject:charN]){  // cannot be substracted
                             [NSException raise:@"This subtract is not allowed" format:@"%@", romanNumber];
+                            
                         }
                         
                         NSNumber *realArabicN = [NSNumber numberWithInt:([arabicN intValue] - [lastCalculatedN intValue])];
@@ -105,7 +109,7 @@
             }
             
         } else {
-            [NSException raise:@"invalid input" format:@"%@", romanNumber];
+            [NSException raise:@"Invalid input" format:@"%@", romanNumber];
         }
     }
     
@@ -120,21 +124,51 @@
 }
 
 
-+ (NSString *)convertArabicToRoman:(NSNumber *)arabicNumber {
+- (NSString *)convertArabicToRoman:(NSNumber *)arabicNumber {
     
-    NSMutableArray *res = [NSMutableArray array];
+    NSMutableArray *resultArr = [NSMutableArray array];
     
     NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: NO];
     
-    for (id key in [[ARABIC_ROMAN_MAP allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject: sortOrder]])
-    {
+    for (NSNumber *key in [[ARABIC_ROMAN_MAP allKeys] sortedArrayUsingDescriptors:[NSArray arrayWithObject: sortOrder]]) {
+        
         int count = [arabicNumber intValue] / [key intValue];
         for (NSInteger i = 0; i < count; i++){
-            [res addObject: [ARABIC_ROMAN_MAP objectForKey:key]];
+            [resultArr addObject: [ARABIC_ROMAN_MAP objectForKey:key]];
         }
         arabicNumber = [NSNumber numberWithInt:( [arabicNumber intValue] - [key intValue] * count )];
     }
-    return [res componentsJoinedByString:@""];
+    return [resultArr componentsJoinedByString:@""];
+}
+
+
+#pragma mark - private methods
+
+- (BOOL)checkRepeatForString:(NSString *)charN inTable:(NSDictionary *)repeatTable {
+    
+    if ([NON_REPEAT_NUMBERS containsObject:charN]) {    // cannot repeatable numbers
+        [NSException raise:@"this roman number cannot repeat" format:@"%@", charN];
+        return false;
+        
+    } else {    // repeat more than 3 times
+        if ([repeatTable valueForKey:charN] != nil && [[repeatTable valueForKey:charN] intValue] == REPEATED_TIMES) {
+            [NSException raise:@"this roman number cannot repeat more than 3 times" format:@"%@", charN];
+            return false;
+            
+        } else {
+            
+            if ([repeatTable valueForKey:charN] == nil) {
+                [repeatTable setValue:[NSNumber numberWithInt:2] forKey:charN];
+                
+            } else {
+                NSNumber *repeatTimes = [NSNumber numberWithInt:[[repeatTable valueForKey:charN] intValue]+1];
+                [repeatTable setValue:repeatTimes forKey:charN];
+                
+            }
+            
+            return true;
+        }
+    }
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "GGTranslation.h"
 
 @interface GuideToTheGalaxyTests : XCTestCase {
-
+    GGRomanArabicConversion *romanArabicConversion;
 }
 
 @end
@@ -22,6 +22,8 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    romanArabicConversion = [[GGRomanArabicConversion alloc] init];
     
     // predefine roman number as some alias
     [[GGTranslation sharedInstance] translateInput:@"glob is I"];
@@ -41,21 +43,21 @@
 
 - (void)testUnitConversion {
     // roman arabic conversion tests
-    XCTAssert([[GGRomanArabicConversion convertRomanToArabic:@"MMM"] isEqualToNumber:[NSNumber numberWithInt:3000]],
+    XCTAssert([[romanArabicConversion convertRomanToArabic:@"MMM"] isEqualToNumber:[NSNumber numberWithInt:3000]],
               @"check roman MMM to arabic 3000");
-    XCTAssert([[GGRomanArabicConversion convertRomanToArabic:@"XXXIX"] isEqualToNumber:[NSNumber numberWithInt:39]],
+    XCTAssert([[romanArabicConversion convertRomanToArabic:@"XXXIX"] isEqualToNumber:[NSNumber numberWithInt:39]],
               @"check roman MMM to arabic 39");
     
-    XCTAssert([[GGRomanArabicConversion convertRomanToArabic:@"MCMXLIV"] isEqualToNumber:[NSNumber numberWithInt:1944]],
+    XCTAssert([[romanArabicConversion convertRomanToArabic:@"MCMXLIV"] isEqualToNumber:[NSNumber numberWithInt:1944]],
               @"check roman MCMXLIV to arabic 1944");
     
-    XCTAssert([[GGRomanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1903]] isEqualToString:@"MCMIII"],
+    XCTAssert([[romanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1903]] isEqualToString:@"MCMIII"],
               @"check arabic 1903 to roman MCMIII");
     
-    XCTAssert([[GGRomanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1944]] isEqualToString:@"MCMXLIV"],
+    XCTAssert([[romanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1944]] isEqualToString:@"MCMXLIV"],
               @"check arabic 1944 to roman MCMXLIV");
     
-    XCTAssert([[GGRomanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1954]] isEqualToString:@"MCMLIV"],
+    XCTAssert([[romanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1954]] isEqualToString:@"MCMLIV"],
               @"check arabic 1954 to roman MCMLIV");
 }
 
@@ -76,16 +78,16 @@
 - (void)testInValidInput {
     
     // Only allowed number to repeat
-    XCTAssertThrowsSpecific([GGRomanArabicConversion convertRomanToArabic:@"DD"], NSException, @"this roman number cannot repeat");
+    XCTAssertThrowsSpecific([romanArabicConversion convertRomanToArabic:@"DD"], NSException, @"this roman number cannot repeat");
     
     // repeat only 3 times
-    XCTAssertThrowsSpecific([GGRomanArabicConversion convertRomanToArabic:@"MMMM"], NSException, @"this roman number cannot repeat more than 3 times");
+    XCTAssertThrowsSpecific([romanArabicConversion convertRomanToArabic:@"MMMM"], NSException, @"this roman number cannot repeat more than 3 times");
     
     // subtract number restrict
-    XCTAssertThrowsSpecific([GGRomanArabicConversion convertRomanToArabic:@"IM"], NSException, @"This subtract is not allowed");
+    XCTAssertThrowsSpecific([romanArabicConversion convertRomanToArabic:@"IM"], NSException, @"This subtract is not allowed");
     
     // subtract only once
-    XCTAssertThrowsSpecific([GGRomanArabicConversion convertRomanToArabic:@"IVX"], NSException, @"Only one small-value symbol may be subtracted from any large-value symbol");
+    XCTAssertThrowsSpecific([romanArabicConversion convertRomanToArabic:@"IVX"], NSException, @"Only one small-value symbol may be subtracted from any large-value symbol");
     
     // how much wood could a woodchuck chuck if a woodchuck could chuck wood ?
     XCTAssert([[[GGTranslation sharedInstance] translateInput:@"how much wood could a woodchuck chuck if a woodchuck could chuck wood ?"] isEqualToString:@"I have no idea what you are talking about"], @"check invalid questions");

@@ -17,7 +17,7 @@
  *
  *  @return arabic
  */
-+ (NSNumber *)convertRomanToArabic:(NSString *)roman;
+- (NSNumber *)convertRomanToArabic:(NSString *)roman;
 
 
 /**
@@ -27,7 +27,7 @@
  *
  *  @return roman
  */
-+ (NSString *)convertArabicToRoman:(NSNumber *)arabic;
+- (NSString *)convertArabicToRoman:(NSNumber *)arabic;
 
 
 @end
