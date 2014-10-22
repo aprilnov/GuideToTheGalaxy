@@ -14,11 +14,11 @@
 		<string>https://github.com/aprilnov/GuideToTheGalaxy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GuideToTheGalaxy/GuideToTheGalaxy.xcodeproj</string>
+	<string>GuideToTheGalaxy.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>17CC94A18BF960D7A2FE70389D08B4F51B647AAE</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/aprilnov/GuideToTheGalaxy.git</string>

@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "GGRomanArabicConversion.h"
 #import "GGTranslation.h"
+#import "NSNumber+Roman.h"
 
 @interface GuideToTheGalaxyTests : XCTestCase {
     GGRomanArabicConversion *romanArabicConversion;
@@ -58,6 +59,27 @@
               @"check arabic 1944 to roman MCMXLIV");
     
     XCTAssert([[romanArabicConversion convertArabicToRoman:[NSNumber numberWithInt:1954]] isEqualToString:@"MCMLIV"],
+              @"check arabic 1954 to roman MCMLIV");
+}
+
+- (void)testUnitConversionWithCategory {
+    // roman arabic conversion tests
+
+    XCTAssert([[NSNumber numberWithRoman:@"MMM"] isEqualToNumber:[NSNumber numberWithInt:3000]],
+              @"check roman MMM to arabic 3000");
+    XCTAssert([[NSNumber numberWithRoman:@"XXXIX"] isEqualToNumber:[NSNumber numberWithInt:39]],
+              @"check roman MMM to arabic 39");
+    
+    XCTAssert([[NSNumber numberWithRoman:@"MCMXLIV"] isEqualToNumber:[NSNumber numberWithInt:1944]],
+              @"check roman MCMXLIV to arabic 1944");
+    
+    XCTAssert([[[NSNumber numberWithInt:1903] convertToRoman] isEqualToString:@"MCMIII"],
+              @"check arabic 1903 to roman MCMIII");
+    
+    XCTAssert([[[NSNumber numberWithInt:1944] convertToRoman] isEqualToString:@"MCMXLIV"],
+              @"check arabic 1944 to roman MCMXLIV");
+    
+    XCTAssert([[[NSNumber numberWithInt:1954] convertToRoman] isEqualToString:@"MCMLIV"],
               @"check arabic 1954 to roman MCMLIV");
 }
 

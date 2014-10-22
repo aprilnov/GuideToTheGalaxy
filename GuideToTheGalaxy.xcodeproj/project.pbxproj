@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47BB18ABA6B8F2FB0D826CEA /* libPods-GuideToTheGalaxyKiwiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2861C321FDDF971C9F0CB358 /* libPods-GuideToTheGalaxyKiwiTests.a */; };
 		E42F51B119F3A688008AEE27 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E42F51B019F3A688008AEE27 /* input.txt */; };
 		E4909C5119F1547400CC5987 /* GuideToTheGalaxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5019F1547400CC5987 /* GuideToTheGalaxyTests.m */; };
 		E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C5C19F154FA00CC5987 /* AppDelegate.m */; };
@@ -17,6 +18,8 @@
 		E4909C7219F154FA00CC5987 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4909C6919F154FA00CC5987 /* main.m */; };
 		F6514E0519F4A78F003102CC /* GGRomanArabicConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */; };
 		F6514E0619F4A78F003102CC /* GGTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6514E0419F4A78F003102CC /* GGTranslation.m */; };
+		F68508B719F7545C008F6672 /* NSNumber+Roman.m in Sources */ = {isa = PBXBuildFile; fileRef = F68508B619F7545C008F6672 /* NSNumber+Roman.m */; };
+		F68508C819F781A1008F6672 /* GuideToTheGalaxyKiwiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F68508C719F781A1008F6672 /* GuideToTheGalaxyKiwiSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +30,19 @@
 			remoteGlobalIDString = E4909C3019F1547400CC5987;
 			remoteInfo = GuideToTheGalaxy;
 		};
+		F68508C219F77EE5008F6672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4909C2919F1547400CC5987 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4909C3019F1547400CC5987;
+			remoteInfo = GuideToTheGalaxy;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2861C321FDDF971C9F0CB358 /* libPods-GuideToTheGalaxyKiwiTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuideToTheGalaxyKiwiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D393C2836B816CBFEE8F72E /* Pods-GuideToTheGalaxyKiwiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideToTheGalaxyKiwiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuideToTheGalaxyKiwiTests/Pods-GuideToTheGalaxyKiwiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CB18E7007EC3DAA84E74E98 /* Pods-GuideToTheGalaxyKiwiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuideToTheGalaxyKiwiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuideToTheGalaxyKiwiTests/Pods-GuideToTheGalaxyKiwiTests.release.xcconfig"; sourceTree = "<group>"; };
 		E42F51B019F3A688008AEE27 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuideToTheGalaxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideToTheGalaxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +61,11 @@
 		F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGRomanArabicConversion.m; sourceTree = "<group>"; };
 		F6514E0319F4A78F003102CC /* GGTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTranslation.h; sourceTree = "<group>"; };
 		F6514E0419F4A78F003102CC /* GGTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTranslation.m; sourceTree = "<group>"; };
+		F68508B519F7545C008F6672 /* NSNumber+Roman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Roman.h"; sourceTree = "<group>"; };
+		F68508B619F7545C008F6672 /* NSNumber+Roman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Roman.m"; sourceTree = "<group>"; };
+		F68508BC19F77EE4008F6672 /* GuideToTheGalaxyKiwiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuideToTheGalaxyKiwiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68508BF19F77EE5008F6672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68508C719F781A1008F6672 /* GuideToTheGalaxyKiwiSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideToTheGalaxyKiwiSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,15 +83,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68508B919F77EE4008F6672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BB18ABA6B8F2FB0D826CEA /* libPods-GuideToTheGalaxyKiwiTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1318B8DD53D60FA009939692 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D393C2836B816CBFEE8F72E /* Pods-GuideToTheGalaxyKiwiTests.debug.xcconfig */,
+				6CB18E7007EC3DAA84E74E98 /* Pods-GuideToTheGalaxyKiwiTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4909C2819F1547400CC5987 = {
 			isa = PBXGroup;
 			children = (
 				E4909C5A19F154FA00CC5987 /* GuideToTheGalaxy */,
 				E4909C4D19F1547400CC5987 /* GuideToTheGalaxyTests */,
+				F68508BD19F77EE5008F6672 /* GuideToTheGalaxyKiwiTests */,
 				E4909C3219F1547400CC5987 /* Products */,
+				1318B8DD53D60FA009939692 /* Pods */,
+				F16DDB2F5BD4C449438D3F0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +120,7 @@
 			children = (
 				E4909C3119F1547400CC5987 /* GuideToTheGalaxy.app */,
 				E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */,
+				F68508BC19F77EE4008F6672 /* GuideToTheGalaxyKiwiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +200,14 @@
 			path = VOs;
 			sourceTree = "<group>";
 		};
+		F16DDB2F5BD4C449438D3F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2861C321FDDF971C9F0CB358 /* libPods-GuideToTheGalaxyKiwiTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6514E0019F4A78F003102CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +215,27 @@
 				F6514E0219F4A78F003102CC /* GGRomanArabicConversion.m */,
 				F6514E0319F4A78F003102CC /* GGTranslation.h */,
 				F6514E0419F4A78F003102CC /* GGTranslation.m */,
+				F68508B519F7545C008F6672 /* NSNumber+Roman.h */,
+				F68508B619F7545C008F6672 /* NSNumber+Roman.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F68508BD19F77EE5008F6672 /* GuideToTheGalaxyKiwiTests */ = {
+			isa = PBXGroup;
+			children = (
+				F68508C719F781A1008F6672 /* GuideToTheGalaxyKiwiSpec.m */,
+				F68508BE19F77EE5008F6672 /* Supporting Files */,
+			);
+			path = GuideToTheGalaxyKiwiTests;
+			sourceTree = "<group>";
+		};
+		F68508BE19F77EE5008F6672 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F68508BF19F77EE5008F6672 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +276,26 @@
 			productReference = E4909C4A19F1547400CC5987 /* GuideToTheGalaxyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F68508BB19F77EE4008F6672 /* GuideToTheGalaxyKiwiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F68508C419F77EE5008F6672 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyKiwiTests" */;
+			buildPhases = (
+				3EC269051A37E5F96B2AFE3E /* Check Pods Manifest.lock */,
+				F68508B819F77EE4008F6672 /* Sources */,
+				F68508B919F77EE4008F6672 /* Frameworks */,
+				F68508BA19F77EE4008F6672 /* Resources */,
+				43D14046E344C0D1CEF73091 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F68508C319F77EE5008F6672 /* PBXTargetDependency */,
+			);
+			name = GuideToTheGalaxyKiwiTests;
+			productName = GuideToTheGalaxyKiwiTests;
+			productReference = F68508BC19F77EE4008F6672 /* GuideToTheGalaxyKiwiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,6 +310,10 @@
 					};
 					E4909C4919F1547400CC5987 = {
 						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = E4909C3019F1547400CC5987;
+					};
+					F68508BB19F77EE4008F6672 = {
+						CreatedOnToolsVersion = 6.1;
 						TestTargetID = E4909C3019F1547400CC5987;
 					};
 				};
@@ -243,6 +333,7 @@
 			targets = (
 				E4909C3019F1547400CC5987 /* GuideToTheGalaxy */,
 				E4909C4919F1547400CC5987 /* GuideToTheGalaxyTests */,
+				F68508BB19F77EE4008F6672 /* GuideToTheGalaxyKiwiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +357,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68508BA19F77EE4008F6672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EC269051A37E5F96B2AFE3E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		43D14046E344C0D1CEF73091 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuideToTheGalaxyKiwiTests/Pods-GuideToTheGalaxyKiwiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4909C2D19F1547400CC5987 /* Sources */ = {
@@ -276,6 +407,7 @@
 				F6514E0619F4A78F003102CC /* GGTranslation.m in Sources */,
 				E4909C6D19F154FA00CC5987 /* ViewController.m in Sources */,
 				E4909C7219F154FA00CC5987 /* main.m in Sources */,
+				F68508B719F7545C008F6672 /* NSNumber+Roman.m in Sources */,
 				F6514E0519F4A78F003102CC /* GGRomanArabicConversion.m in Sources */,
 				E4909C6C19F154FA00CC5987 /* AppDelegate.m in Sources */,
 			);
@@ -289,6 +421,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68508B819F77EE4008F6672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68508C819F781A1008F6672 /* GuideToTheGalaxyKiwiSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = E4909C3019F1547400CC5987 /* GuideToTheGalaxy */;
 			targetProxy = E4909C4B19F1547400CC5987 /* PBXContainerItemProxy */;
+		};
+		F68508C319F77EE5008F6672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4909C3019F1547400CC5987 /* GuideToTheGalaxy */;
+			targetProxy = F68508C219F77EE5008F6672 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -449,6 +594,44 @@
 			};
 			name = Release;
 		};
+		F68508C519F77EE5008F6672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D393C2836B816CBFEE8F72E /* Pods-GuideToTheGalaxyKiwiTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuideToTheGalaxy.app/GuideToTheGalaxy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GuideToTheGalaxyKiwiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuideToTheGalaxy.app/GuideToTheGalaxy";
+			};
+			name = Debug;
+		};
+		F68508C619F77EE5008F6672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB18E7007EC3DAA84E74E98 /* Pods-GuideToTheGalaxyKiwiTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuideToTheGalaxy.app/GuideToTheGalaxy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GuideToTheGalaxyKiwiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuideToTheGalaxy.app/GuideToTheGalaxy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,6 +658,15 @@
 			buildConfigurations = (
 				E4909C5819F1547400CC5987 /* Debug */,
 				E4909C5919F1547400CC5987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F68508C419F77EE5008F6672 /* Build configuration list for PBXNativeTarget "GuideToTheGalaxyKiwiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68508C519F77EE5008F6672 /* Debug */,
+				F68508C619F77EE5008F6672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
